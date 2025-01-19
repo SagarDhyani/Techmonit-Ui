@@ -12,10 +12,12 @@ const MainLayout = ({ children }) => {
       <div className="flex-1 flex pt-10 bg-custom-layout">
         <Sidebar />
         <main className="flex-1 p-2 ml-2 mt-8 bg-custom-layout overflow-y-auto">
-          <div className=" text-xl font-semibold text-gray-700">
-            {title || "Dashboard"}{" "}
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700">
+            {title || "Dashboard"}
           </div>
-          <div className="">{children}</div>
+          <div className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
+            {children}
+          </div>
         </main>
       </div>
     </div>
