@@ -1,9 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-body{
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.menu-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-menu a {
+  position: relative;
+  color: #1f5dd8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.sub-menu a:hover {
+  color: #060000;
+}
+
+.sub-menu a .underline-animation {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #070101;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.sub-menu a:hover .underline-animation {
+  transform: scaleX(1);
+}
+
+aside {
+  background-color: #1e293b;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+aside .p-4 {
+  background-color: #4288f1;
+  color: #ffffff;
+}
+
+aside .hover\:bg-blue-600:hover {
+  background-color: #2563eb;
+}
+
+nav {
+  scrollbar-width: thin;
+  scrollbar-color: #c6cedf transparent;
+}
+
+nav::-webkit-scrollbar {
+  width: 6px;
 }
 
 @tailwind base;
