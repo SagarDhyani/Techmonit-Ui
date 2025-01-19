@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaDatabase, FaServer, FaCog, FaHdd } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsDot } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const MenuItem = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +25,10 @@ const MenuItem = ({ item }) => {
 
   return (
     <div className="menu-item">
-      <div
-        className="flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-blue-100 transition-colors duration-300"
+      <Link
+        to={item.path}
         onClick={toggleSubMenu}
+        className="flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-blue-100 transition-colors duration-300"
       >
         <div className="flex items-center gap-2">
           {icons[item.name] || <FaCog className="text-gray-300" />}
@@ -41,14 +43,14 @@ const MenuItem = ({ item }) => {
             <MdOutlineKeyboardArrowRight />
           </span>
         )}
-      </div>
+      </Link>
       {item.subItems && isOpen && (
         <div className="sub-menu pl-8">
           {item.subItems.map((subItem) => (
-            <a
+            <Link
               key={subItem.name}
-              href={subItem.path}
-              className="py-2 text-gray-300 relative group flex items-center gap-2"
+              to={subItem.path}
+              className="py-2 text-gray-300 relative group flex items-center gap-2 hover:text-gray-800"
             >
               <BsDot
                 size={30}
@@ -56,7 +58,7 @@ const MenuItem = ({ item }) => {
               />
               {subItem.name}
               <span className="underline-animation"></span>
-            </a>
+            </Link>
           ))}
         </div>
       )}

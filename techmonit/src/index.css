@@ -45,6 +45,39 @@ aside {
   background-color: #1e293b;
   color: #ffffff;
   font-family: "Inter", sans-serif;
+  width: 240px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  overflow-y: auto;
+}
+
+main {
+  flex-grow: 1;
+  position: sticky;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+nav {
+  scrollbar-width: thin;
+  scrollbar-color: #c6cedf transparent;
+}
+
+nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: #c6cedf;
+  border-radius: 3px;
+}
+
+nav::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 aside .p-4 {
