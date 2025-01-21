@@ -2,7 +2,7 @@ export const menuItems = [
   { name: "Find the database", path: "/find_database" },
   {
     name: "Server Activity",
-    path: "/server_activity",
+    path: "/server_activity/pg_activity",
     subItems: [
       { name: "PG Activity", path: "/server_activity/pg_activity" },
       { name: "Bouncer Status", path: "/server_activity/bouncer_status" },
@@ -17,7 +17,7 @@ export const menuItems = [
   { name: "Long Running Queries", path: "/long_running_queries" },
   {
     name: "Size DB & Table",
-    path: "size_db",
+    path: "/size_db/db_size",
     subItems: [
       { name: "DB Size", path: "/size_db/db_size" },
       { name: "Table Size", path: "/" },

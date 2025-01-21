@@ -82,3 +82,29 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
+
+.date-pickers {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-picker-label {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.datepicker-input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  height: 40px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
