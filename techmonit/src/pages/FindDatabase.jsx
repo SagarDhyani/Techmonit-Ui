@@ -1,10 +1,8 @@
-import React from 'react'
-import FindDatabaseContainer from '../containers/FindDatabaseContainer'
+import React from "react";
+import FindDatabaseContainer from "../containers/FindDatabaseContainer";
 
 const FindDatabase = () => {
-  return (
-    <FindDatabaseContainer />
-  )
-}
+  return <FindDatabaseContainer />;
+};
 
-export default FindDatabase
+export default FindDatabase;
