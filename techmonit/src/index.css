@@ -98,6 +98,10 @@ nav::-webkit-scrollbar {
   width: 6px;
 }
 
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
